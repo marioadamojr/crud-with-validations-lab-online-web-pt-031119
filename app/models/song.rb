@@ -10,8 +10,10 @@ class Song < ApplicationRecord
   end
 
   def future_release
-    if self.release_year > Date.current.year
-      errors.add(:release_year, "Release Year Cannot Exceed Current Year")
+    if self.release_year
+      if self.release_year > Date.current.year
+        errors.add(:release_year, "Release Year Cannot Exceed Current Year")
+      end
     end
   end
 end
