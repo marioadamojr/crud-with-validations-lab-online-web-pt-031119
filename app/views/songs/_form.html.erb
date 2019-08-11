@@ -30,10 +30,8 @@
   </div>
 
   <div class="field">
-    <%= f.radio_button :released, true %>
-    <%= f.label :released, "Released" %><br>
-    <%= f.radio_button :released, false %>
-    <%= f.label :released, "Unreleased" %>
+    <%= f.check_box :released %>
+    <%= f.label :released %>
   </div>
 
   <div class="field">
